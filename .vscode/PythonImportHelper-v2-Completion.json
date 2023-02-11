@@ -24,6 +24,23 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "django.db",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db",
+        "description": "django.db",
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -57,6 +74,38 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -417,6 +466,22 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
         "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
@@ -439,6 +504,22 @@
         "description": "django.contrib.auth.models",
         "isExtraImport": true,
         "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
         "documentation": {}
     },
     {
@@ -495,6 +576,31 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "django.urls",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -562,6 +668,22 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -602,6 +724,46 @@
         "documentation": {}
     },
     {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseRedirect",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
         "label": "job.models",
         "kind": 6,
         "isExtraImport": true,
@@ -611,11 +773,20 @@
         "documentation": {}
     },
     {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
+        "label": "Job",
+        "importPath": "job.models",
+        "description": "job.models",
         "isExtraImport": true,
-        "detail": "django",
+        "detail": "job.models",
+        "documentation": {}
+    },
+    {
+        "label": "django_filters",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django_filters",
+        "description": "django_filters",
+        "detail": "django_filters",
         "documentation": {}
     },
     {
@@ -632,6 +803,14 @@
         "description": "django.core.paginator",
         "isExtraImport": true,
         "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
         "documentation": {}
     },
     {
@@ -712,11 +891,38 @@
         "documentation": {}
     },
     {
+        "label": "SignUpForm",
+        "kind": 6,
+        "importPath": "accounts.forms",
+        "description": "accounts.forms",
+        "peekOfCode": "class SignUpForm(UserCreationForm):\n    class Meta:\n        model = User\n        fields = ['username', 'email', 'password1', 'password2']\nclass UserForm(forms.ModelForm):\n    class Meta:\n        model = User\n        fields = ['first_name','last_name','email']\nclass ProfileForm(forms.ModelForm):\n    class Meta:",
+        "detail": "accounts.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserForm",
+        "kind": 6,
+        "importPath": "accounts.forms",
+        "description": "accounts.forms",
+        "peekOfCode": "class UserForm(forms.ModelForm):\n    class Meta:\n        model = User\n        fields = ['first_name','last_name','email']\nclass ProfileForm(forms.ModelForm):\n    class Meta:\n        model = Profile\n        fields = ['city','phone_number', 'image']",
+        "detail": "accounts.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileForm",
+        "kind": 6,
+        "importPath": "accounts.forms",
+        "description": "accounts.forms",
+        "peekOfCode": "class ProfileForm(forms.ModelForm):\n    class Meta:\n        model = Profile\n        fields = ['city','phone_number', 'image']",
+        "detail": "accounts.forms",
+        "documentation": {}
+    },
+    {
         "label": "Profile",
         "kind": 6,
         "importPath": "accounts.models",
         "description": "accounts.models",
-        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    city = models.ForeignKey('City', related_name='user_city', on_delete=models.CASCADE, blank=True, null=True)\n    phone_number = models.CharField(max_length=13)\n    image = models.ImageField(upload_to='profile/')\n    def __str__(self):\n        return self.user\n@receiver(post_save, sender=User)\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    city = models.ForeignKey('City', related_name='user_city', on_delete=models.CASCADE, blank=True, null=True)\n    phone_number = models.CharField(max_length=13)\n    image = models.ImageField(upload_to='profile/')\n    def __str__(self):\n        return str(self.user)\n@receiver(post_save, sender=User)\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:",
         "detail": "accounts.models",
         "documentation": {}
     },
@@ -743,7 +949,7 @@
         "kind": 5,
         "importPath": "accounts.urls",
         "description": "accounts.urls",
-        "peekOfCode": "app_name = 'accounts'\nurlpatterns = [\n    path('signup', views.signup, name='sign_up'),\n]",
+        "peekOfCode": "app_name = 'job'\nurlpatterns = [\n    path('signup', views.signup, name='sign_up'),\n    path('profile/', views.profile, name='profile'),\n    path('profile/edit', views.profile_edit, name='profile_edit'),\n]",
         "detail": "accounts.urls",
         "documentation": {}
     },
@@ -752,7 +958,7 @@
         "kind": 5,
         "importPath": "accounts.urls",
         "description": "accounts.urls",
-        "peekOfCode": "urlpatterns = [\n    path('signup', views.signup, name='sign_up'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('signup', views.signup, name='sign_up'),\n    path('profile/', views.profile, name='profile'),\n    path('profile/edit', views.profile_edit, name='profile_edit'),\n]",
         "detail": "accounts.urls",
         "documentation": {}
     },
@@ -761,7 +967,25 @@
         "kind": 2,
         "importPath": "accounts.views",
         "description": "accounts.views",
-        "peekOfCode": "def signup(request):\n    pass",
+        "peekOfCode": "def signup(request):\n    if request.method==\"POST\":\n        form = SignUpForm(request.POST)\n        if form.is_valid:\n            form.save()\n            username = form.cleaned_data['username']\n            password = form.cleaned_data['password1']\n            user = authenticate(username = username, password= password)\n            login(request,user)\n            return redirect('accounts/profile')",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "def profile(request):\n    profile = Profile.objects.get(user= request.user)\n    return render(request, 'accounts/profile.html', {'profile':profile})\ndef profile_edit(request):\n    if request.method==\"POST\":\n        userform = UserForm(request.POST ,instance=request.user)\n        profileform = ProfileForm(request.POST, request.FILES, instance=request.user.profile)\n        if userform.is_valid() and profileform.is_valid():\n            userform.save()\n            profileform.save()",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "profile_edit",
+        "kind": 2,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "def profile_edit(request):\n    if request.method==\"POST\":\n        userform = UserForm(request.POST ,instance=request.user)\n        profileform = ProfileForm(request.POST, request.FILES, instance=request.user.profile)\n        if userform.is_valid() and profileform.is_valid():\n            userform.save()\n            profileform.save()\n            return redirect(reverse('accounts:profile'))\n    else:\n        userform = UserForm(instance=request.user)",
         "detail": "accounts.views",
         "documentation": {}
     },
@@ -775,12 +999,66 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "contact.migrations.0001_initial",
+        "description": "contact.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Info',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('place', models.CharField(max_length=200)),",
+        "detail": "contact.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "contact.migrations.0002_info_place_2",
+        "description": "contact.migrations.0002_info_place_2",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('contact', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='info',\n            name='place_2',\n            field=models.CharField(default=1, max_length=200),\n            preserve_default=False,",
+        "detail": "contact.migrations.0002_info_place_2",
+        "documentation": {}
+    },
+    {
         "label": "ContactConfig",
         "kind": 6,
         "importPath": "contact.apps",
         "description": "contact.apps",
         "peekOfCode": "class ContactConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'contact'",
         "detail": "contact.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Info",
+        "kind": 6,
+        "importPath": "contact.models",
+        "description": "contact.models",
+        "peekOfCode": "class Info(models.Model):\n    place = models.CharField(max_length=200)\n    place_2 = models.CharField(max_length=200)\n    phone_number = models.CharField(max_length=15)\n    email = models.EmailField(max_length=200)\n    def __str__(self):\n        return self.email\n    class Meta:\n        verbose_name = 'Info'\n        verbose_name_plural = 'Infos'",
+        "detail": "contact.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "contact.urls",
+        "description": "contact.urls",
+        "peekOfCode": "app_name = 'contact'\nurlpatterns = [\n    path('', views.send_message, name='contact'),\n]",
+        "detail": "contact.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "contact.urls",
+        "description": "contact.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.send_message, name='contact'),\n]",
+        "detail": "contact.urls",
+        "documentation": {}
+    },
+    {
+        "label": "send_message",
+        "kind": 2,
+        "importPath": "contact.views",
+        "description": "contact.views",
+        "peekOfCode": "def send_message(request):\n    myinfo = Info.objects.first()\n    if request.method == 'POST':\n        message = request.POST['message']\n        name = request.POST['name']\n        email = request.POST['email']\n        subject = request.POST['subject']\n        return HttpResponse(\"this function not work now you can contact me at azmour2016maroc@gmail.com  .\")\n    return render(request, 'contact/contact.html', {'myinfo':myinfo})",
+        "detail": "contact.views",
         "documentation": {}
     },
     {
@@ -928,6 +1206,15 @@
         "documentation": {}
     },
     {
+        "label": "JobFilter",
+        "kind": 6,
+        "importPath": "job.filters",
+        "description": "job.filters",
+        "peekOfCode": "class JobFilter(django_filters.FilterSet):\n    title = django_filters.CharFilter(lookup_expr='icontains')\n    description = django_filters.CharFilter(lookup_expr='icontains')\n    class Meta:\n        model = Job\n        fields = ['title', 'job_type', 'description', 'salary', 'category']",
+        "detail": "job.filters",
+        "documentation": {}
+    },
+    {
         "label": "ApplyForm",
         "kind": 6,
         "importPath": "job.form",
@@ -1013,7 +1300,7 @@
         "kind": 2,
         "importPath": "job.views",
         "description": "job.views",
-        "peekOfCode": "def job_list(request):\n    job_list = Job.objects.all()\n    paginator = Paginator(job_list, 4) # Show 1 job per page.\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {'jobs': page_obj}\n    return render(request, 'job/job_list.html', context)\ndef job_detail(request, slug):\n    job_detail = Job.objects.get(slug=slug)\n    if request.method == 'POST':",
+        "peekOfCode": "def job_list(request):\n    job_list = Job.objects.all()\n    filter = JobFilter(request.GET, queryset=job_list)\n    job_list = filter.qs\n    paginator = Paginator(job_list, 4) # Show 1 job per page.\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {'jobs': page_obj, 'filter':filter}\n    return render(request, 'job/job_list.html', context)\ndef job_detail(request, slug):",
         "detail": "job.views",
         "documentation": {}
     },
@@ -1184,7 +1471,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1193,7 +1480,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1202,7 +1489,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1211,7 +1498,61 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1229,7 +1570,7 @@
         "kind": 5,
         "importPath": "project.urls",
         "description": "project.urls",
-        "peekOfCode": "urlpatterns = [\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),\n    path('jobs/', include('job.urls', namespace='jobs')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('accounts/', include('accounts.urls', namespace=\"accounts\")),\n    path('admin/', admin.site.urls),\n    path('jobs/', include('job.urls', namespace='jobs')),\n    path('contact/', include('contact.urls', namespace='contact')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "project.urls",
         "documentation": {}
     },

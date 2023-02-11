@@ -115,7 +115,7 @@ p {
 
 /* line 69, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
 label {
-  color: #7e7e7e;
+  color: #240404;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
@@ -278,7 +278,7 @@ h3 {
   position: absolute;
   content: "";
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5db2ff+0,7db9e8+100&1+24,0+96 */
-  background: -moz-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: -moz-linear-gradient(left, #5db2ff 0%, #5586b2 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* Chrome10-25,Safari5.1-6 */
