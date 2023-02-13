@@ -515,6 +515,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "UserCreationForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
@@ -584,6 +592,22 @@
         "isExtraImport": true,
         "importPath": "django.urls",
         "description": "django.urls",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
         "detail": "django.urls",
         "documentation": {}
     },
@@ -781,6 +805,30 @@
         "documentation": {}
     },
     {
+        "label": "Job",
+        "importPath": "job.models",
+        "description": "job.models",
+        "isExtraImport": true,
+        "detail": "job.models",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "django_filters",
         "kind": 6,
         "isExtraImport": true,
@@ -795,6 +843,30 @@
         "description": "django.utils.text",
         "isExtraImport": true,
         "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
+        "label": "routers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -1057,7 +1129,7 @@
         "kind": 2,
         "importPath": "contact.views",
         "description": "contact.views",
-        "peekOfCode": "def send_message(request):\n    myinfo = Info.objects.first()\n    if request.method == 'POST':\n        message = request.POST['message']\n        name = request.POST['name']\n        email = request.POST['email']\n        subject = request.POST['subject']\n        return HttpResponse(\"this function not work now you can contact me at azmour2016maroc@gmail.com  .\")\n    return render(request, 'contact/contact.html', {'myinfo':myinfo})",
+        "peekOfCode": "def send_message(request):\n   \"\"\"\n         myinfo = Info.objects.first()\n            if request.method == 'POST':\n                message = request.POST['message']\n                name = request.POST['name']\n                email = request.POST['email']\n                subject = request.POST['subject']\n        Context ={'myinfo':myinfo}\n        return HttpResponse(\"this function not work now you can contact me at azmour2016maroc@gmail.com  .\")",
         "detail": "contact.views",
         "documentation": {}
     },
@@ -1197,6 +1269,15 @@
         "documentation": {}
     },
     {
+        "label": "joblistapi",
+        "kind": 2,
+        "importPath": "job.api",
+        "description": "job.api",
+        "peekOfCode": "def joblistapi(request):\n    jobs = Job.objects.all()\n    serializer = Jobserializer(jobs, many=True)\n    return Response(serializer.data)",
+        "detail": "job.api",
+        "documentation": {}
+    },
+    {
         "label": "JobConfig",
         "kind": 6,
         "importPath": "job.apps",
@@ -1278,11 +1359,20 @@
         "documentation": {}
     },
     {
+        "label": "Jobserializer",
+        "kind": 6,
+        "importPath": "job.serializers",
+        "description": "job.serializers",
+        "peekOfCode": "class Jobserializer(serializers.ModelSerializer):\n    class Meta:\n        model = Job\n        fields = '__all__'",
+        "detail": "job.serializers",
+        "documentation": {}
+    },
+    {
         "label": "app_name",
         "kind": 5,
         "importPath": "job.urls",
         "description": "job.urls",
-        "peekOfCode": "app_name = 'jobs'\nurlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n]",
+        "peekOfCode": "app_name = 'jobs'\nurlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/list', api.joblistapi, name='joblistapi'),\n]",
         "detail": "job.urls",
         "documentation": {}
     },
@@ -1291,7 +1381,7 @@
         "kind": 5,
         "importPath": "job.urls",
         "description": "job.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/list', api.joblistapi, name='joblistapi'),\n]",
         "detail": "job.urls",
         "documentation": {}
     },
@@ -1471,7 +1561,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n\"\"\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  \nEMAIL_HOST = \"smtp.gmail.com\"  ",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1480,7 +1570,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    '/var/www/static/',\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n\"\"\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  \nEMAIL_HOST = \"smtp.gmail.com\"  \nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  ",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1489,7 +1579,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n\"\"\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  \nEMAIL_HOST = \"smtp.gmail.com\"  \nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  \nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1498,7 +1588,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR,\"media\")\n\"\"\"\nEMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  \nEMAIL_HOST = \"smtp.gmail.com\"  \nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  \nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1507,7 +1597,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  # new\nEMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"  \nEMAIL_HOST = \"smtp.gmail.com\"  \nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  \nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1516,7 +1606,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"  # new\nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"  \nEMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  \nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1525,7 +1615,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  # new\nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_HOST_USER = \"azmour2016maroc@gmail.com\"  \nEMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1534,7 +1624,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  # new\nEMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"123455rghfdkdkd\"  \nEMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1543,7 +1633,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_PORT = 587  # new\nEMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_PORT = 587  \nEMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1552,7 +1642,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "EMAIL_USE_TLS = True  # new\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "EMAIL_USE_TLS = True  \n\"\"\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -1570,7 +1660,7 @@
         "kind": 5,
         "importPath": "project.urls",
         "description": "project.urls",
-        "peekOfCode": "urlpatterns = [\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('accounts/', include('accounts.urls', namespace=\"accounts\")),\n    path('admin/', admin.site.urls),\n    path('jobs/', include('job.urls', namespace='jobs')),\n    path('contact/', include('contact.urls', namespace='contact')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('accounts/', include('accounts.urls', namespace=\"accounts\")),\n    path('admin/', admin.site.urls),\n    path('jobs/', include('job.urls', namespace='jobs')),\n    path('contact/', include('contact.urls', namespace='contact')),\n    path('api-auth/', include('rest_framework.urls')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "project.urls",
         "documentation": {}
     },
