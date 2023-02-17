@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.job_list, name='job_list'),
     path('add', views.add_job, name='add_job'),
     path('<str:slug>', views.job_detail, name='job_detail'),
-    path('api/list', api.joblistapi, name='joblistapi'),
+    path('api/jobs', api.JobList.as_view(), name='JobList'),
+     path('api/jobs/<int:id>', api.JobDetail.as_view(), name='JobDetail'),
 ]

@@ -5,7 +5,7 @@ from rest_framework import routers, serializers, viewsets
 from job.models import Job
 
 
-class Jobserializer(serializers.ModelSerializer):
+class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = '__all__'

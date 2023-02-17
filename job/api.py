@@ -1,12 +1,20 @@
 
+from job.views import job_detail
 from .models import Job
-from .serializers import Jobserializer
+from .serializers import JobSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import generics
 
 
-@api_view(['GET'])
-def joblistapi(request):
-    jobs = Job.objects.all()
-    serializer = Jobserializer(jobs, many=True)
-    return Response(serializer.data)
+
+
+class JobList(generics.ListCreateAPIView):
+    queryset = Job.objects.all()
+    serializer_class = JobSerializer
+
+
+class JobDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Job.objects.all()
+    serializer_class = JobSerializer
+    lookup_field = 'id'

@@ -813,6 +813,14 @@
         "documentation": {}
     },
     {
+        "label": "job_detail",
+        "importPath": "job.views",
+        "description": "job.views",
+        "isExtraImport": true,
+        "detail": "job.views",
+        "documentation": {}
+    },
+    {
         "label": "api_view",
         "importPath": "rest_framework.decorators",
         "description": "rest_framework.decorators",
@@ -829,20 +837,11 @@
         "documentation": {}
     },
     {
-        "label": "django_filters",
-        "kind": 6,
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "importPath": "django_filters",
-        "description": "django_filters",
-        "detail": "django_filters",
-        "documentation": {}
-    },
-    {
-        "label": "slugify",
-        "importPath": "django.utils.text",
-        "description": "django.utils.text",
-        "isExtraImport": true,
-        "detail": "django.utils.text",
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -867,6 +866,23 @@
         "description": "rest_framework",
         "isExtraImport": true,
         "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "django_filters",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django_filters",
+        "description": "django_filters",
+        "detail": "django_filters",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
         "documentation": {}
     },
     {
@@ -1269,11 +1285,20 @@
         "documentation": {}
     },
     {
-        "label": "joblistapi",
-        "kind": 2,
+        "label": "JobList",
+        "kind": 6,
         "importPath": "job.api",
         "description": "job.api",
-        "peekOfCode": "def joblistapi(request):\n    jobs = Job.objects.all()\n    serializer = Jobserializer(jobs, many=True)\n    return Response(serializer.data)",
+        "peekOfCode": "class JobList(generics.ListCreateAPIView):\n    queryset = Job.objects.all()\n    serializer_class = JobSerializer\nclass JobDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Job.objects.all()\n    serializer_class = JobSerializer\n    lookup_field = 'id'",
+        "detail": "job.api",
+        "documentation": {}
+    },
+    {
+        "label": "JobDetail",
+        "kind": 6,
+        "importPath": "job.api",
+        "description": "job.api",
+        "peekOfCode": "class JobDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Job.objects.all()\n    serializer_class = JobSerializer\n    lookup_field = 'id'",
         "detail": "job.api",
         "documentation": {}
     },
@@ -1359,11 +1384,11 @@
         "documentation": {}
     },
     {
-        "label": "Jobserializer",
+        "label": "JobSerializer",
         "kind": 6,
         "importPath": "job.serializers",
         "description": "job.serializers",
-        "peekOfCode": "class Jobserializer(serializers.ModelSerializer):\n    class Meta:\n        model = Job\n        fields = '__all__'",
+        "peekOfCode": "class JobSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Job\n        fields = '__all__'",
         "detail": "job.serializers",
         "documentation": {}
     },
@@ -1372,7 +1397,7 @@
         "kind": 5,
         "importPath": "job.urls",
         "description": "job.urls",
-        "peekOfCode": "app_name = 'jobs'\nurlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/list', api.joblistapi, name='joblistapi'),\n]",
+        "peekOfCode": "app_name = 'jobs'\nurlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/jobs', api.JobList.as_view(), name='JobList'),\n     path('api/jobs/<int:id>', api.JobDetail.as_view(), name='JobDetail'),\n]",
         "detail": "job.urls",
         "documentation": {}
     },
@@ -1381,7 +1406,7 @@
         "kind": 5,
         "importPath": "job.urls",
         "description": "job.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/list', api.joblistapi, name='joblistapi'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.job_list, name='job_list'),\n    path('add', views.add_job, name='add_job'),\n    path('<str:slug>', views.job_detail, name='job_detail'),\n    path('api/jobs', api.JobList.as_view(), name='JobList'),\n     path('api/jobs/<int:id>', api.JobDetail.as_view(), name='JobDetail'),\n]",
         "detail": "job.urls",
         "documentation": {}
     },
